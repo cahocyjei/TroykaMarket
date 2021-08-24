@@ -1,7 +1,5 @@
 package com.troyka.market.persistence.entitys;
 
-import com.troyka.market.persistence.Producto;
-
 import javax.persistence.*;
 
 @Entity

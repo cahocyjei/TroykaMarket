@@ -1,4 +1,4 @@
-package com.troyka.market.persistence;
+package com.troyka.market.persistence.entitys;
 
 import com.troyka.market.persistence.entitys.Categoria;
 import com.troyka.market.persistence.entitys.ComprasProducto;

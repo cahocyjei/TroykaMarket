@@ -1,7 +1,7 @@
 package com.troyka.market.persistence.mapper;
 
 import com.troyka.market.domain.Product;
-import com.troyka.market.persistence.Producto;
+import com.troyka.market.persistence.entitys.Producto;
 import org.mapstruct.*;
 
 import java.util.List;
@@ -19,7 +19,7 @@ public interface ProductMapper {
             @Mapping(source= "categoria",target = "category"),
     })
     Product toProduct(Producto producto);
-    List<Product> toProduct(List<Producto> productos);
+    List<Product> toProducts(List<Producto> productos);
 
     @InheritInverseConfiguration
     @Mapping(target="codigoBarras",ignore = true)

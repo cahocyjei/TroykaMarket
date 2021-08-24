@@ -1,6 +1,6 @@
 package com.troyka.market.persistence.crud;
 
-import com.troyka.market.persistence.Producto;
+import com.troyka.market.persistence.entitys.Producto;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
