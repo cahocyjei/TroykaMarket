@@ -5,6 +5,7 @@ import com.troyka.market.domain.repository.ProductRepository;
 import com.troyka.market.persistence.crud.ProdutoCrudRepository;
 import com.troyka.market.persistence.entitys.Producto;
 import com.troyka.market.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,8 +13,11 @@ import java.util.Optional;
 
 @Repository
 public class ProductoRepository implements ProductRepository {
+
+    @Autowired
     private ProductMapper productMapper;
 
+    @Autowired
     private ProdutoCrudRepository produtoCrudRepository;
 
     @Override
@@ -30,7 +34,7 @@ public class ProductoRepository implements ProductRepository {
 
     @Override
     public Optional<List<Product>> getScarseProducts(int quantity) {
-        Optional<List<Producto>> productos= produtoCrudRepository.findByCantidad_stockLessThanAndEstado(quantity,true);
+        Optional<List<Producto>> productos= produtoCrudRepository.findByCantidadStockLessThanAndEstado(quantity,true);
         return productos.map(prods -> productMapper.toProducts(prods));
     }
 

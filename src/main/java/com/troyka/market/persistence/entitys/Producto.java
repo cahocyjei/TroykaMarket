@@ -1,8 +1,5 @@
 package com.troyka.market.persistence.entitys;
 
-import com.troyka.market.persistence.entitys.Categoria;
-import com.troyka.market.persistence.entitys.ComprasProducto;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -36,6 +33,22 @@ public class Producto {
 
     @OneToMany(mappedBy = "producto")
     private List<ComprasProducto> productos;
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public List<ComprasProducto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<ComprasProducto> productos) {
+        this.productos = productos;
+    }
 
     public Integer getIdProducto() {
         return idProducto;

@@ -2,6 +2,7 @@ package com.troyka.market.persistence.entitys;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "compras")
@@ -25,6 +26,9 @@ public class Compra {
     @ManyToOne
     @JoinColumn(name="id_cliente",insertable = false,updatable = false)
     private Cliente cliente;
+
+    @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
+    private List<ComprasProducto> productos;
 
     public Integer getIdCompra() {
         return idCompra;
@@ -72,6 +76,22 @@ public class Compra {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public List<ComprasProducto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<ComprasProducto> productos) {
+        this.productos = productos;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
 }

@@ -10,9 +10,9 @@ import java.util.List;
 public interface ProductMapper {
 
     @Mappings({
-            @Mapping(source= "id_producto",target="productId"),
+            @Mapping(source= "idProducto",target="productId"),
             @Mapping(source= "nombre",target = "name"),
-            @Mapping(source= "id_Categoria",target="categoryId"),
+            @Mapping(source= "idCategoria",target="categoryId"),
             @Mapping(source= "precioVenta",target = "price"),
             @Mapping(source= "cantidadStock",target="stock"),
             @Mapping(source= "estado",target = "active"),
