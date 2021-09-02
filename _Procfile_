@@ -1,1 +1,0 @@
-web: java -jar -Dspring.profiles.active=pdn build/libs/troyka.market-1.0-SANAPSHOT.jar
