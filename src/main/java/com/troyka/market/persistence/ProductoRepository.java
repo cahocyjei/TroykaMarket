@@ -22,7 +22,7 @@ public class ProductoRepository implements ProductRepository {
 
     @Override
     public List<Product> getAll(){
-        List<Producto> productos = (List<Producto>) produtoCrudRepository.findAll();
+        List<Producto> productos = produtoCrudRepository.findAll();
         return productMapper.toProducts(productos);
     }
 
