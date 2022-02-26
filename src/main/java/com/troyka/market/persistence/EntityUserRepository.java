@@ -22,18 +22,18 @@ public class EntityUserRepository implements DtoUserRepository {
     @Override
     public List<DtoUser> getAll() {
         List<EntityUser> listUser = userCrudRepository.findAll();
-        return userMapper.entityLisToDtoList(listUser);
+        return userMapper.listEntityUserToListDtoUser(listUser);
     }
 
     @Override
-    public void save(DtoUser dtoUser) {
-        userCrudRepository.save(userMapper.dtoUserToEntityUser(dtoUser));
+    public DtoUser save(DtoUser dtoUser) {
+        EntityUser toSave = userMapper.dtoUserToEntityUser(dtoUser);
+        return userMapper.entityUserToDtoUser(userCrudRepository.save(toSave));
     }
 
     @Override
-    public Optional<DtoUser> getUserById(int id) {
-        Optional<EntityUser> entityUser = userCrudRepository.findById(id);
-        return Optional.of(userMapper.entityUserToDtoUser(entityUser));
+    public Optional<DtoUser> getUser(int id) {
+        return userCrudRepository.findById(id).map(user -> userMapper.entityUserToDtoUser(user));
     }
 
     @Override

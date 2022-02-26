@@ -1,5 +1,6 @@
 package com.troyka.market.persistence.mapper;
 
+
 import com.troyka.market.domain.DtoUser;
 import com.troyka.market.persistence.entitys.EntityUser;
 import org.mapstruct.InheritInverseConfiguration;
@@ -8,7 +9,6 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
 import java.util.List;
-import java.util.Optional;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
@@ -23,12 +23,11 @@ public interface UserMapper {
             @Mapping(source = "country",target = "country"),
             @Mapping(source = "city",target = "city"),
             @Mapping(source = "date",target = "date"),
-
     })
     EntityUser dtoUserToEntityUser(DtoUser dtoUser);
-    List<EntityUser> dtoLisToEntityList(List<DtoUser> dtoUsers);
+    List<EntityUser> listDtoUserToListEntityUser(List<DtoUser> dtoUserList);
 
     @InheritInverseConfiguration
-    DtoUser entityUserToDtoUser(Optional<EntityUser> entityUser);
-    List<DtoUser> entityLisToDtoList(List<EntityUser> entityUsers);
+    DtoUser entityUserToDtoUser(EntityUser entityUser);
+    List<DtoUser> listEntityUserToListDtoUser(List<EntityUser> entityUserList);
 }

@@ -3,7 +3,7 @@ package com.troyka.market.domain;
 import java.time.LocalDateTime;
 
 public class DtoUser {
-    private int id;
+    private Integer id;
     private String fullName;
     private String lastName;
     private String email;
@@ -16,11 +16,11 @@ public class DtoUser {
     public DtoUser() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -64,14 +64,6 @@ public class DtoUser {
         this.city = city;
     }
 
-    public LocalDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -86,5 +78,13 @@ public class DtoUser {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 }

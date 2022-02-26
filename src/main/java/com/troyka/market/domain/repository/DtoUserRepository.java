@@ -7,8 +7,8 @@ import java.util.Optional;
 
 public interface DtoUserRepository {
     List<DtoUser>getAll();
-    void save(DtoUser dtoUser);
-    Optional<DtoUser> getUserById(int id);
+    DtoUser save(DtoUser dtoUser);
+    Optional<DtoUser> getUser(int id);
     void update(DtoUser dtoUser);
     void delete(int id);
 }

@@ -1,7 +1,7 @@
 package com.troyka.market.persistence.entitys;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
+
 @Entity
 @Table(name="users")
 public class EntityUser {
@@ -72,14 +72,6 @@ public class EntityUser {
         this.city = city;
     }
 
-    public LocalDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -94,5 +86,13 @@ public class EntityUser {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 }
