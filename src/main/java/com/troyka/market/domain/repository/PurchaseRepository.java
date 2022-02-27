@@ -1,6 +1,6 @@
 package com.troyka.market.domain.repository;
 
-import com.troyka.market.domain.Purchase;
+import com.troyka.market.domain.dto.Purchase;
 
 import java.util.List;
 import java.util.Optional;

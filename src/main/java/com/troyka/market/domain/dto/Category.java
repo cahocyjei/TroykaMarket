@@ -1,4 +1,4 @@
-package com.troyka.market.domain;
+package com.troyka.market.domain.dto;
 
 public class Category {
 
@@ -29,4 +29,5 @@ public class Category {
     public void setActive(boolean active) {
         this.active = active;
     }
+
 }

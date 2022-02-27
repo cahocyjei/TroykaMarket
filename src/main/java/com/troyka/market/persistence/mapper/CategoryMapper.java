@@ -1,6 +1,6 @@
 package com.troyka.market.persistence.mapper;
 
-import com.troyka.market.domain.Category;
+import com.troyka.market.domain.dto.Category;
 import com.troyka.market.persistence.entitys.Categoria;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;

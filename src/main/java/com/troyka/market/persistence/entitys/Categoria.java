@@ -1,6 +1,7 @@
 package com.troyka.market.persistence.entitys;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -11,7 +12,6 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
     private Integer idCategoria;
-
     @Column(name ="descripcion",unique = true)
     private String descripcion;
     private Boolean estado;
@@ -50,4 +50,5 @@ public class Categoria {
     public void setProductos(List<Producto> productos) {
         this.productos = productos;
     }
+
 }

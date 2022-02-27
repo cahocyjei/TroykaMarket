@@ -1,4 +1,4 @@
-package com.troyka.market.domain;
+package com.troyka.market.domain.dto;
 
 import java.time.LocalDateTime;
 

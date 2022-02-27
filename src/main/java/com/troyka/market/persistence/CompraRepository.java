@@ -1,6 +1,6 @@
 package com.troyka.market.persistence;
 
-import com.troyka.market.domain.Purchase;
+import com.troyka.market.domain.dto.Purchase;
 import com.troyka.market.domain.repository.PurchaseRepository;
 import com.troyka.market.persistence.crud.CompraCrudRepository;
 import com.troyka.market.persistence.entitys.Compra;

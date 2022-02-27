@@ -1,7 +1,7 @@
 package com.troyka.market.web.controller;
 
 
-import com.troyka.market.domain.Category;
+import com.troyka.market.domain.dto.Category;
 import com.troyka.market.domain.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

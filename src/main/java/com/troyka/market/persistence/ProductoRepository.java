@@ -1,6 +1,6 @@
 package com.troyka.market.persistence;
 
-import com.troyka.market.domain.Product;
+import com.troyka.market.domain.dto.Product;
 import com.troyka.market.domain.repository.ProductRepository;
 import com.troyka.market.persistence.crud.ProdutoCrudRepository;
 import com.troyka.market.persistence.entitys.Producto;

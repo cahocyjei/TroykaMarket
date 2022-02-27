@@ -1,6 +1,6 @@
 package com.troyka.market.persistence.mapper;
 
-import com.troyka.market.domain.PurchaseItem;
+import com.troyka.market.domain.dto.PurchaseItem;
 import com.troyka.market.persistence.entitys.ComprasProducto;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;

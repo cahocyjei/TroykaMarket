@@ -1,7 +1,7 @@
 package com.troyka.market.persistence;
 
 
-import com.troyka.market.domain.Category;
+import com.troyka.market.domain.dto.Category;
 import com.troyka.market.domain.repository.CategoryRepository;
 import com.troyka.market.persistence.crud.CategoriaCrudRepository;
 import com.troyka.market.persistence.entitys.Categoria;

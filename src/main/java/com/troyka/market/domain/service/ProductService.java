@@ -1,6 +1,6 @@
 package com.troyka.market.domain.service;
 
-import com.troyka.market.domain.Product;
+import com.troyka.market.domain.dto.Product;
 import com.troyka.market.domain.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

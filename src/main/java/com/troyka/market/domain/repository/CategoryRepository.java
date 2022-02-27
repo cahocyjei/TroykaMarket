@@ -1,6 +1,6 @@
 package com.troyka.market.domain.repository;
 
-import com.troyka.market.domain.Category;
+import com.troyka.market.domain.dto.Category;
 
 import java.util.List;
 

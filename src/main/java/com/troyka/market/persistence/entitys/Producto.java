@@ -10,21 +10,16 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
     private Integer idProducto;
-
     private String nombre;
-
+    private String image;
     @Column(name = "id_categoria")
     private Integer idCategoria;
-
     @Column(name = "codigo_barras")
     private String codigoBarras;
-
     @Column(name = "precio_venta")
     private Double precioVenta;
-
     @Column(name = "cantidad_stock")
     private Integer cantidadStock;
-
     private Boolean estado;
 
     @ManyToOne()
@@ -104,5 +99,13 @@ public class Producto {
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

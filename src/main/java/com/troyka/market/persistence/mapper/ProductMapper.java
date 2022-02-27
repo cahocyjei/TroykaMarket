@@ -1,6 +1,6 @@
 package com.troyka.market.persistence.mapper;
 
-import com.troyka.market.domain.Product;
+import com.troyka.market.domain.dto.Product;
 import com.troyka.market.persistence.entitys.Producto;
 import org.mapstruct.*;
 
@@ -12,6 +12,7 @@ public interface ProductMapper {
     @Mappings({
             @Mapping(source= "idProducto",target="productId"),
             @Mapping(source= "nombre",target = "name"),
+            @Mapping(source = "image",target = "image"),
             @Mapping(source= "idCategoria",target="categoryId"),
             @Mapping(source= "precioVenta",target = "price"),
             @Mapping(source= "cantidadStock",target="stock"),

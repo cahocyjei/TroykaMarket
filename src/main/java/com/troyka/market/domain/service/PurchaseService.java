@@ -1,10 +1,7 @@
 package com.troyka.market.domain.service;
 
-import com.troyka.market.Application;
-import com.troyka.market.domain.Purchase;
+import com.troyka.market.domain.dto.Purchase;
 import com.troyka.market.domain.repository.PurchaseRepository;
-import org.apache.juli.logging.Log;
-import org.apache.juli.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

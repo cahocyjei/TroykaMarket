@@ -1,6 +1,6 @@
 package com.troyka.market.web.controller;
 
-import com.troyka.market.domain.DtoUser;
+import com.troyka.market.domain.dto.DtoUser;
 import com.troyka.market.domain.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

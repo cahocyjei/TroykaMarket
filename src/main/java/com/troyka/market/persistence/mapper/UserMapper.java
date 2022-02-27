@@ -1,7 +1,7 @@
 package com.troyka.market.persistence.mapper;
 
 
-import com.troyka.market.domain.DtoUser;
+import com.troyka.market.domain.dto.DtoUser;
 import com.troyka.market.persistence.entitys.EntityUser;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;

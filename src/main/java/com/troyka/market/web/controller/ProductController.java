@@ -1,6 +1,6 @@
 package com.troyka.market.web.controller;
 
-import com.troyka.market.domain.Product;
+import com.troyka.market.domain.dto.Product;
 import com.troyka.market.domain.service.ProductService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
