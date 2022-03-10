@@ -12,6 +12,7 @@ public class DtoUser {
     private String country;
     private String city;
     private LocalDateTime date;
+    private String rol;
 
     public DtoUser() {
     }
@@ -86,5 +87,13 @@ public class DtoUser {
 
     public void setDate(LocalDateTime date) {
         this.date = date;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 }

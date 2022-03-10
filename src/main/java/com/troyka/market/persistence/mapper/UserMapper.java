@@ -23,6 +23,7 @@ public interface UserMapper {
             @Mapping(source = "country",target = "country"),
             @Mapping(source = "city",target = "city"),
             @Mapping(source = "date",target = "date"),
+            @Mapping(source = "rol",target = "rol"),
     })
     EntityUser dtoUserToEntityUser(DtoUser dtoUser);
     List<EntityUser> listDtoUserToListEntityUser(List<DtoUser> dtoUserList);

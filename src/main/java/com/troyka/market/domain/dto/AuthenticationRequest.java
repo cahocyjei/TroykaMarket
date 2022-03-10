@@ -1,10 +1,10 @@
 package com.troyka.market.domain.dto;
 
+
 public class AuthenticationRequest {
 
     private String username;
     private String password;
-
 
     public String getUsername() {
         return username;
@@ -22,3 +22,4 @@ public class AuthenticationRequest {
         this.password = password;
     }
 }
+
