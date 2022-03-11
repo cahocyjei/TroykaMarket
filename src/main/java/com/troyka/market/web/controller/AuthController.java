@@ -27,7 +27,7 @@ public class AuthController {
     private JWTUtil jwtUtil;
 
     @PostMapping("/authenticate")
-    @CrossOrigin(origins = "https://localhost:3005")
+    @CrossOrigin(origins = "http://localhost:3005")
     public ResponseEntity<AuthenticationResponse> createToken(@RequestBody AuthenticationRequest request){
         try {
             authenticationManager
