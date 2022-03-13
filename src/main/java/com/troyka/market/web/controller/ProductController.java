@@ -22,13 +22,14 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/all")
+    @CrossOrigin(origins = "http://localhost:3005")
     @ApiOperation("Get all supermarket products")
     @ApiResponse(code= 200,message = "Ok")
-    @CrossOrigin(origins = "http://localhost:3005")
     public ResponseEntity<List<Product>>  getAll() {
         return new ResponseEntity<>(productService.getAll(),HttpStatus.OK);
     }
     @GetMapping("/{id}")
+    @CrossOrigin(origins = "http://localhost:3005")
     @ApiOperation("Get products by id")
     @ApiResponses({
             @ApiResponse(code= 200, message = "Ok"),
@@ -40,11 +41,13 @@ public class ProductController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
     @PostMapping("category/{id}")
+    @CrossOrigin(origins = "http://localhost:3005")
     public ResponseEntity<List<Product>> getByCategory(@PathVariable("id") int categoryId) {
         return productService.getByCategory(categoryId).map(prods->new ResponseEntity<>(prods,HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
     @PostMapping("/save")
+    @CrossOrigin(origins = "http://localhost:3005")
     public ResponseEntity<Product>  save(@RequestBody Product product) {
         return new ResponseEntity<>(productService.save(product),HttpStatus.CREATED) ;
     }
