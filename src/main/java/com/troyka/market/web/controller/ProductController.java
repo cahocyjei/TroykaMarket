@@ -24,6 +24,7 @@ public class ProductController {
     @GetMapping("/all")
     @ApiOperation("Get all supermarket products")
     @ApiResponse(code= 200,message = "Ok")
+    @CrossOrigin(origins = "http://localhost:3005")
     public ResponseEntity<List<Product>>  getAll() {
         return new ResponseEntity<>(productService.getAll(),HttpStatus.OK);
     }
