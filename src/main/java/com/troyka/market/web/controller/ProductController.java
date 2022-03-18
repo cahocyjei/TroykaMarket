@@ -19,13 +19,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/products")
-@CrossOrigin(origins = "http://localhost:3005")
 public class ProductController {
     private Log LOGGER = LogFactory.getLog(ProductController.class);
     @Autowired
     private ProductService productService;
 
     @GetMapping("/all")
+    @CrossOrigin(origins = "http://localhost:3005")
     @ApiOperation("Get all supermarket products")
     @ApiResponse(code= 200,message = "Ok")
     public ResponseEntity<List<Product>>  getAll() {
