@@ -38,24 +38,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.addFilterBefore(jwtFilterRequest, UsernamePasswordAuthenticationFilter.class);
     }
 
-    @Bean
-    public WebMvcConfigurer corsConfigurer(){
-        return new WebMvcConfigurer(){
-            @Override
-            public void addCorsMappings(CorsRegistry registry){
-                registry.addMapping("/products/**")
-                        .allowedOrigins("http://localhost:3005")
-                        .allowedMethods("GET","POST")
-                        .maxAge(3600);
-                registry.addMapping("/authenticate/**")
-                        .allowedOrigins("http://localhost:3005")
-                        .allowedMethods("POST")
-                        .maxAge(3600);
-            }
-        };
-    }
-
-
     @Override
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
